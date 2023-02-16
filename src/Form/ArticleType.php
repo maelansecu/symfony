@@ -12,6 +12,8 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+
 
 class ArticleType extends AbstractType
 {
@@ -54,6 +56,10 @@ class ArticleType extends AbstractType
                 'label' => 'Image',
                 'allow_delete' => true,
                 'delete_label' => 'Supprimer l\'image',
+            ])
+            ->add('enabled', CheckboxType::class, [
+                'label' => 'Actif',
+                'required' => false,
             ]);
     }
 

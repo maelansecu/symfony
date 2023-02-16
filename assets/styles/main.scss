@@ -9,5 +9,12 @@
 @import "./_mixins.scss";
 
 @import "./_structure.scss";
+
+//import blog card
 @import "./Components/blog-card.scss";
+
+// Import banner
 @import "./Components/banner.scss";
+
+//import article styles
+@import "./Article/article.scss"
